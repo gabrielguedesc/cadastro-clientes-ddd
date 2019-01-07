@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GG.CadastroClientesDDD.Domain.Validations.Customers;
+using System;
 
 namespace GG.CadastroClientesDDD.Domain.Entities
 {
@@ -9,17 +9,13 @@ namespace GG.CadastroClientesDDD.Domain.Entities
         public string Email { get; set; }
         public string CPF { get; set; }
         public DateTime BirthDate { get; set; }
-        public bool Active { get; private set; }
-        public bool Excluded { get; private set; }
-
+        
         public Customer(string name, string email, string cpf, DateTime birthDate)
         {
             Name = name;
             Email = email;
             CPF = cpf;
             BirthDate = birthDate;
-            Active = true;
-            Excluded = false;
         }
 
         public Customer()
@@ -29,19 +25,8 @@ namespace GG.CadastroClientesDDD.Domain.Entities
 
         public override bool IsValid()
         {
-            throw new NotImplementedException();
-        }
-
-        public void SetAsExcluded()
-        {
-            Active = false;
-            Excluded = true;
-        }
-
-        public void SetAsActive()
-        {
-            Active = true;
-            Excluded = false;
+            ValidationResult = new CustomerIsConsistent().Validate(this);
+            return ValidationResult.IsValid;
         }
     }
 }

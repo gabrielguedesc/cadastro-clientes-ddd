@@ -1,6 +1,4 @@
 ﻿using GG.CadastroClientesDDD.Domain.Entities;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace GG.CadastroClientesDDD.Domain.Interfaces.Repository
 {
@@ -8,6 +6,5 @@ namespace GG.CadastroClientesDDD.Domain.Interfaces.Repository
     {
         Customer GetByCPF(string cpf);
         Customer GetByEmail(string email);
-        IEnumerable<Customer> GetAllCustomersActive();
     }
 }

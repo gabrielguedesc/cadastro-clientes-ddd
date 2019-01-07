@@ -1,7 +1,6 @@
 ﻿using GG.CadastroClientesDDD.Domain.Entities;
 using GG.CadastroClientesDDD.Domain.Interfaces.Repository;
 using GG.CadastroClientesDDD.Domain.Interfaces.Services;
-using GG.CadastroClientesDDD.Domain.Validations.Customers;
 using System;
 using System.Collections.Generic;
 
@@ -23,18 +22,12 @@ namespace GG.CadastroClientesDDD.Domain.Services
                 return customer;
             }
 
-            customer.ValidationResult = new CustomerIsValidForRegistration().Validate(customer);
-            if (!customer.ValidationResult.IsValid)
-            {
-                return customer;
-            }
-
             return _customerRepository.Add(customer);
         }
 
         public IEnumerable<Customer> GetAllCustomersActive()
         {
-            return _customerRepository.GetAllCustomersActive();
+            return _customerRepository.GetAll();
         }
 
         public Customer GetByCPF(string cpf)

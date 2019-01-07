@@ -5,9 +5,9 @@ namespace GG.CadastroClientesDDD.Domain.Entities
 {
     public abstract class Entity
     {
-        public Entity()
+        protected Entity()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             ValidationResult = new ValidationResult();
         }
 

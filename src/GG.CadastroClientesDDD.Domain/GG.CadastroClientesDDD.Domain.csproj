@@ -56,7 +56,7 @@
     <Compile Include="Specifications\Customers\CustomerMustHaveValidatedDocument.cs" />
     <Compile Include="Specifications\Generic\CPFMustBeValid.cs" />
     <Compile Include="Specifications\Generic\EmailMustBeValid.cs" />
-    <Compile Include="Validations\Customers\CustomerIsValidForRegistration.cs" />
+    <Compile Include="Validations\Customers\CustomerIsConsistent.cs" />
     <Compile Include="ValueObjects\CPF.cs" />
     <Compile Include="ValueObjects\Email.cs" />
   </ItemGroup>

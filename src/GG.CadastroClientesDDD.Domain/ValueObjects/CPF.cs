@@ -4,75 +4,48 @@
     {
         public static bool Validate(string cpf)
         {
-            if (cpf.Length > 11)
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+
+            if (cpf.Length != 11)
                 return false;
 
-            while (cpf.Length != 11)
-                cpf = '0' + cpf;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
 
-            var equal = true;
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
 
-            for (var i = 1; i < 11 && equal; i++)
-            {
-                if (cpf[i] != cpf[0])
-                {
-                    equal = false;
-                }
-            }
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
 
-            if (equal || cpf == "12345678909")
-            {
-                return false;
-            }
+            digito = resto.ToString();
 
-            var numbers = new int[11];
+            tempCpf = tempCpf + digito;
 
-            for (var i = 0; i <= 11; i++)
-            {
-                numbers[i] = int.Parse(cpf[i].ToString());
-            }
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
 
-            var sum = 0;
-            for (var i = 0; i < 9; i++)
-            {
-                sum += (10 - i) * numbers[i];
-            }
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
 
-            var result = sum % 11;
+            digito = digito + resto.ToString();
 
-            if (result == 1 || result == 0)
-            {
-                if (numbers[9] != 0)
-                {
-                    return false;
-                }
-            }
-            else if (numbers[9] != 11 - result)
-            {
-                return false;
-            }
-
-            sum = 0;
-            for (var i = 0; i < 10; i++)
-            {
-                sum += (11 - i) * numbers[i];
-            }
-
-            result = sum % 11;
-
-            if (result == 1 || result == 0)
-            {
-                if (numbers[10] != 0)
-                {
-                    return false;
-                }
-            }
-            else if (numbers[10] != 11 - result)
-            {
-                return false;
-            }
-
-            return false;
+            return cpf.EndsWith(digito);
         }
     }
 }
