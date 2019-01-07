@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Interfaces\Repository\ICustomerRepository.cs" />
     <Compile Include="Interfaces\Repository\IRepositoryRead.cs" />
     <Compile Include="Interfaces\Repository\IRepositoryWrite.cs" />
     <Compile Include="Interfaces\Services\ICustomerService.cs" />
@@ -55,7 +56,7 @@
     <Compile Include="Specifications\Customers\CustomerMustHaveValidatedDocument.cs" />
     <Compile Include="Specifications\Generic\CPFMustBeValid.cs" />
     <Compile Include="Specifications\Generic\EmailMustBeValid.cs" />
-    <Compile Include="Validations\Customers\CustomerIsConsistent.cs" />
+    <Compile Include="Validations\Customers\CustomerIsValidForRegistration.cs" />
     <Compile Include="ValueObjects\CPF.cs" />
     <Compile Include="ValueObjects\Email.cs" />
   </ItemGroup>
