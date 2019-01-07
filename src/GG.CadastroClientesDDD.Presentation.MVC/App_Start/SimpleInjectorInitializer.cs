@@ -28,7 +28,7 @@ namespace GG.CadastroClientesDDD.Presentation.MVC.App_Start
      
         private static void InitializeContainer(Container container)
         {
-            SimpleInjectorBootstraper.Register(container);
+            SimpleInjectorBootstrapper.Register(container);
         }
     }
 }
