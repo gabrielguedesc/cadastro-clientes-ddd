@@ -3,6 +3,7 @@ using GG.CadastroClientesDDD.Domain.Interfaces.Repository;
 using GG.CadastroClientesDDD.Domain.Interfaces.Services;
 using GG.CadastroClientesDDD.Domain.Validations.Customers;
 using System;
+using System.Collections.Generic;
 
 namespace GG.CadastroClientesDDD.Domain.Services
 {
@@ -29,6 +30,11 @@ namespace GG.CadastroClientesDDD.Domain.Services
             }
 
             return _customerRepository.Add(customer);
+        }
+
+        public IEnumerable<Customer> GetAllCustomersActive()
+        {
+            return _customerRepository.GetAllCustomersActive();
         }
 
         public Customer GetByCPF(string cpf)

@@ -9,10 +9,10 @@ using System.Linq.Expressions;
 
 namespace GG.CadastroClientesDDD.Infra.Data.Repository
 {
-    public abstract class Repository<TEntity> : IRepositoryRead<TEntity>, IRepositoryWrite<TEntity> where TEntity : Entity
+    public abstract class Repository<TEntity> : IRepositoryRead<TEntity>, IRepositoryWrite<TEntity> where TEntity : Entity, new()
     {
-        protected CadastroClientesDDDContext Db { get; set; }
-        protected DbSet<TEntity> DbSet { get; set; }
+        protected CadastroClientesDDDContext Db;
+        protected DbSet<TEntity> DbSet;
 
         public Repository()
         {

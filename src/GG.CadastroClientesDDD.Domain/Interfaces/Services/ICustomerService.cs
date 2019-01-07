@@ -1,5 +1,6 @@
 ﻿using GG.CadastroClientesDDD.Domain.Entities;
 using System;
+using System.Collections.Generic;
 
 namespace GG.CadastroClientesDDD.Domain.Interfaces.Services
 {
@@ -9,6 +10,7 @@ namespace GG.CadastroClientesDDD.Domain.Interfaces.Services
         Customer GetById(Guid id);
         Customer GetByCPF(string cpf);
         Customer GetByEmail(string email);
+        IEnumerable<Customer> GetAllCustomersActive();
         Customer Update(Customer customer);
         void Remove(Guid id);
     }
