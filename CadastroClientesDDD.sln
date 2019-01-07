@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GG.CadastroClientesDDD.Infr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GG.CadastroClientesDDD.Presentation.MVC", "src\GG.CadastroClientesDDD.Presentation.MVC\GG.CadastroClientesDDD.Presentation.MVC.csproj", "{5D254AC5-54B4-4795-9778-F169491DDB48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GG.CadastroClientesDDD.Application", "src\GG.CadastroClientesDDD.Application\GG.CadastroClientesDDD.Application.csproj", "{80A57509-70FC-410D-9DDE-EFA14BC26B7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{5D254AC5-54B4-4795-9778-F169491DDB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D254AC5-54B4-4795-9778-F169491DDB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D254AC5-54B4-4795-9778-F169491DDB48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A57509-70FC-410D-9DDE-EFA14BC26B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A57509-70FC-410D-9DDE-EFA14BC26B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A57509-70FC-410D-9DDE-EFA14BC26B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A57509-70FC-410D-9DDE-EFA14BC26B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{496D98D6-2E46-41AF-BEAF-B250ACC81A36} = {531D0A5C-6625-4D66-A2D5-508EAECA9B75}
 		{9949FA46-EC06-46BA-AC04-FE9566EE0854} = {496D98D6-2E46-41AF-BEAF-B250ACC81A36}
 		{5D254AC5-54B4-4795-9778-F169491DDB48} = {260E60A9-B6EC-49EA-AA17-EC7BDC9BFB08}
+		{80A57509-70FC-410D-9DDE-EFA14BC26B7E} = {B63297A4-4409-4202-B715-710BF11D7EAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81192380-C102-49B1-999F-9C3F4EACC5C4}
