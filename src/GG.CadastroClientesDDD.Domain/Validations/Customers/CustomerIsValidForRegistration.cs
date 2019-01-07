@@ -4,9 +4,9 @@ using GG.CadastroClientesDDD.Domain.Specifications.Customers;
 
 namespace GG.CadastroClientesDDD.Domain.Validations.Customers
 {
-    class CustomerIsConsistent : Validator<Customer>
+    class CustomerIsValidForRegistration : Validator<Customer>
     {
-        public CustomerIsConsistent()
+        public CustomerIsValidForRegistration()
         {
             var customerMustBeOfLegalAge = new CustomerMustBeOfLegalAge();
             var customerMustHaveValidatedDocument = new CustomerMustHaveValidatedDocument();
