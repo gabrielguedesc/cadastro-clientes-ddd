@@ -44,16 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Interfaces\Repository\IRepositoryRead.cs" />
+    <Compile Include="Interfaces\Repository\IRepositoryWrite.cs" />
+    <Compile Include="Interfaces\Services\ICustomerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Specifications\Customers\CustomerMustBeOfLegalAge.cs" />
+    <Compile Include="Specifications\Customers\CustomerMustHaveValidatedDocument.cs" />
+    <Compile Include="Specifications\Generic\CPFMustBeValid.cs" />
+    <Compile Include="Specifications\Generic\EmailMustBeValid.cs" />
+    <Compile Include="Validations\Customers\CustomerIsConsistent.cs" />
+    <Compile Include="ValueObjects\CPF.cs" />
+    <Compile Include="ValueObjects\Email.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
-    <Folder Include="Specifications\" />
-    <Folder Include="Validations\" />
-    <Folder Include="ValueObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
