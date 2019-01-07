@@ -28,11 +28,7 @@ namespace GG.CadastroClientesDDD.Infra.Data.EntityConfig
             Property(c => c.BirthDate)
                 .IsRequired();
 
-            Property(c => c.Active)
-                .IsRequired();
-
-            Property(c => c.Excluded)
-                .IsRequired();
+            Ignore(c => c.ValidationResult);
 
             ToTable("Customers");
         }

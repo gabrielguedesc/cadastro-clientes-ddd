@@ -9,9 +9,9 @@ namespace GG.CadastroClientesDDD.Infra.Data.Context
     {
         public CadastroClientesDDDContext() : base("DefaultConnection")
         {
-            Configuration.ProxyCreationEnabled = true;
-            Configuration.LazyLoadingEnabled = true;
-            Configuration.AutoDetectChangesEnabled = true;
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
+            Configuration.AutoDetectChangesEnabled = false;
         }
 
         public DbSet<Customer> Customers { get; set; }

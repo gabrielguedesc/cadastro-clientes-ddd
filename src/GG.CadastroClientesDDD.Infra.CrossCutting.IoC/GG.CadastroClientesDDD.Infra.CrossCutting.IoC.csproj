@@ -45,12 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleInjectorBootstraper.cs" />
+    <Compile Include="SimpleInjectorBootstrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GG.CadastroClientesDDD.Application\GG.CadastroClientesDDD.Application.csproj">
+      <Project>{80A57509-70FC-410D-9DDE-EFA14BC26B7E}</Project>
+      <Name>GG.CadastroClientesDDD.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GG.CadastroClientesDDD.Domain\GG.CadastroClientesDDD.Domain.csproj">
       <Project>{AD1C2068-0F7E-453B-B70C-E802B935DEDD}</Project>
       <Name>GG.CadastroClientesDDD.Domain</Name>

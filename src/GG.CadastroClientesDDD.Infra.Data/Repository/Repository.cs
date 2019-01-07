@@ -24,10 +24,10 @@ namespace GG.CadastroClientesDDD.Infra.Data.Repository
 
         public TEntity Add(TEntity entity)
         {
-            var obj = DbSet.Add(entity);
+            var objRet = DbSet.Add(entity);
             SaveChanges();
 
-            return obj;
+            return objRet;
         }
 
         public TEntity Update(TEntity entity)
